@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+    <body class="country-background-image">
+
+    <div class="container-delete">
+        <h1>Are you sure you want to delete this country?</h1>
+
+        <form action="{% url 'delete-country' pk=country.pk %}" id='delete' method="post">
+            {% csrf_token %}
+
+            <div id="buttons-delete">
+                <input class="btn submit yes" type="submit" name="confirmation" value="Yes"/>
+                <input class="btn submit no" type="submit" name="confirmation" value="No"/>
+            </div>
+        </form>
+    </div>
+
+    </body>
+
+{% endblock %} 

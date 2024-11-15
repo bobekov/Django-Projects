@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+    <body class="country-background-image">
+    <div class="navigation-attrs">
+        <p>
+            <a href="{% url 'profile-home' %}">
+                <img id="logo-img" src="{% static '/images/logo.jpg' %}" alt="logo"/>
+            </a>
+        </p>
+        <h1 id="country-header">Countries</h1>
+        <a id="add-country" href="{% url 'add-country' %}">Add country</a>
+    </div>
+
+
+    <div class="container-country">
+        {% if not countries %}
+            <p>No countries added yet</p>
+        {% else %}
+            {% for country in countries %}
+                <div class="country-box">
+                    <h2>{{ country.name }}</h2>
+
+                    <div class="details">
+                        <p class="detail-item"><a>Continent: </a>{{ country.continent }}</p>
+                        <div class="detail-item"><a>Capital: </a>{{ country.capital }}</div>
+                        <div class="detail-item"><a>Population: </a>{{ country.population }}<a>М</a></div>
+                        <div class="detail-item"><a>Official Language: </a>{{ country.official_language }}</div>
+                        <div class="detail-item"><a>Currency: </a>{{ country.currency }}</div>
+                        <div class="detail-item">
+                            {% if country.is_visited %}
+                                <a>Visited: </a>Yes
+                            {% else %}
+                                <a>Visited: </a>No
+                            {% endif %}
+                        </div>
+                        {% if country.description %}
+                            <p class="detail-item"><a>Description: </a>{{ country.description }}</p>
+                        {% endif %}
+                    </div>
+
+                    <div id="buttons-edit-delete">
+                        <div id="edit">
+                            <a href="{% url 'edit-country' pk=country.pk %}" id="edit-btn">Edit</a>
+                        </div>
+                        <div id="delete">
+                            <a href="{% url 'delete-country' pk=country.pk %}" id="delete-btn">Delete</a>
+                        </div>
+                    </div>
+
+                </div>
+            {% endfor %}
+        {% endif %}
+    </div>
+
+    </body>
+
+{% endblock %} 
