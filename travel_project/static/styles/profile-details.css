@@ -1,0 +1,197 @@
+.profile-background-image {
+    background-image: url("/static/images/main-profile.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#details-profile {
+    width: 80%;
+    max-width: 800px;
+    text-align: center;
+    padding: 40px 40px;
+    background-color: #58ace6;
+    border-radius: 8px;
+    border: 2px solid #232222;;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: linear-gradient(160deg, #51a7d5 0%, #d3a852 100%);
+    color: #ffffff;
+}
+
+.back-arrow {
+    position: absolute;
+    top: 45px;
+    left: 50px;
+    font-size: 2em;
+    color: white;
+}
+
+.back-arrow:hover {
+    transform: scale(1.05);
+}
+
+#details-profile h2 {
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-size: 38px;
+}
+
+#details-img {
+    display: block;
+    width: 180px;
+    height: 180px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+#details-img:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+#details-title {
+    text-align: center;
+    font-size: 2.2em;
+    margin-bottom: 20px;
+    font-family: "Rage Italic";
+}
+
+#details-description p {
+    font-size: 1.2em;
+    margin: 8px 0;
+}
+
+#action-buttons {
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    margin-top: 60px;
+}
+
+#action-buttons a {
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+    padding: 10px 20px;
+    width: 30%;
+    border-radius: 7px;
+    font-size: 20px;
+    transition: background-color 0.3s ease;
+    border: 1px solid #8e8a8a;
+}
+
+#action-buttons #edit-btn {
+    background-color: #80ac4a;
+}
+
+#action-buttons #delete-btn {
+    background-color: #fb1616;
+}
+
+#action-buttons a:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+#action-buttons a:active {
+    background-color: #004085;
+}
+
+.container .btn-edit-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-edit-profile {
+    background-color: #80ac4a;
+    text-align: center;
+    color: #fff;
+    padding: 10px 20px;
+    width: 30%;
+    border-radius: 7px;
+    font-size: 20px;
+    transition: background-color 0.3s ease;
+    border: 1px solid #8e8a8a;
+    margin-top: 18px;
+}
+
+.btn-edit-profile:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.container-delete {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 700px;
+    background-image: linear-gradient(160deg, #083b57 0%, #b238b6 100%);
+    color: #fff;
+    padding: 40px;
+    box-sizing: border-box;
+    border: #ffffff 3px solid;
+    border-radius: 20px;
+}
+
+.container-delete h1 {
+    font-size: 1.9em;
+    margin-bottom: 30px;
+    font-family: "Californian FB";
+}
+
+#buttons-delete {
+    display: flex;
+    gap: 25px;
+    width: 120%;
+    margin-left: -14%;
+}
+
+.container-delete .btn.submit.yes {
+    padding: 10px 20px;
+    font-size: 1.3em;
+    color: #fff;
+    background-color: #e74c3c;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.container-delete .btn.submit:hover.yes {
+    background-color: #c0392b;
+}
+
+.container-delete .btn.submit.no {
+    padding: 10px 20px;
+    font-size: 1.3em;
+    color: #fff;
+    background-color: #80ac4a;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.container-delete .btn.submit:hover.no {
+    background-color: #6d8e44;
+}

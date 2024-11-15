@@ -1,0 +1,170 @@
+.main-profile-background-image {
+    background-image: url("/static/images/main.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+}
+
+#logo-img {
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 40px 40px;
+}
+
+#logo-img:hover {
+    transform: scale(1.06);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.navigation {
+    display: flex;
+    gap: 1.6rem;
+    font-size: 2.1rem;
+    position: absolute;
+    top: 90px;
+    right: 150px;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: white;
+    font-family: "monospace", monospace;
+    padding: 4px;
+}
+
+.navigation a:hover {
+    transform: scale(1.06);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.navigation .button {
+    color: white;
+    font-size: 2.1rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    font-family: "monospace", monospace;
+}
+
+.navigation .button:hover {
+    transform: scale(1.06);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+#title {
+    color: white;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 480%;
+    margin-top: 16%;
+    width: 70%;
+    animation: fadeIn 2s ease-in-out, colorChange 4s infinite alternate;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+#title:hover {
+    text-shadow: 0 0 20px rgba(225, 201, 41, 0.8), 0 0 40px rgba(12, 99, 154, 0.6);
+    transform: scale(1.06);
+    cursor: pointer;
+    transition: all 0.6s ease;
+}
+
+#title a {
+    font-family: "Rage Italic";
+    font-style: italic;
+}
+
+.booking-form {
+    display: flex;
+    justify-content: space-between;
+    max-width: 70%;
+    padding: 6% 2%;
+    cursor: pointer;
+    margin-top: -17px;
+}
+
+.booking-form a {
+    text-decoration: none;
+}
+
+.booking-form div {
+    display: flex;
+    flex-direction: column;
+    min-width: 17%;
+    border: 3px solid #ffffff;
+    border-radius: 9px;
+    padding: 17px;
+    transition: all 0.4s ease-in-out;
+}
+
+.booking-form div:hover {
+    border-color: #6fb4ec;
+    transform: scale(1.01);
+    z-index: 1;
+}
+
+.booking-form label {
+    font-size: 2rem;
+    margin-bottom: 5px;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.review-form a {
+    text-decoration: none;
+}
+
+.review-form div {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    width: 22%;
+    border: 3px solid #ffffff;
+    border-radius: 9px;
+    padding: 17px;
+    transition: all 0.4s ease-in-out;
+    margin-top: -44px;
+}
+
+.review-form div:hover {
+    border-color: #6fb4ec;
+    transform: scale(1.01);
+    z-index: 1;
+}
+
+.review-form label {
+    font-size: 2rem;
+    margin-bottom: 5px;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.stars-left, .stars-right {
+    font-size: 30px;
+    color: gold;
+}
+
+.stars-left {
+    margin-right: 8px;
+}
+
+.stars-right {
+    margin-left: 8px;
+}
+.review-form div:hover .stars-left,
+.review-form div:hover .stars-right {
+    color: #fff100;
+    transform: scale(1.01);
+}
