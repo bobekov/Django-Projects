@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+    <body class="country-background-image">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <section id="register-page" class="content auth">
+        <form id="register" method="post">
+            <div class="container">
+                <a href="{% url 'details-country' %}" class="back-arrow-left">
+                    <i class="fas fa-arrow-left"></i>
+                </a>
+                <h1>Add Country</h1>
+                {% csrf_token %}
+                {{ form }}
+                <button class="btn submit" type="submit">Add</button>
+            </div>
+        </form>
+    </section>
+
+    </body>
+
+{% endblock %} 
