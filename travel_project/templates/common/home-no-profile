@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    
+<body class="background-image">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <ul class="icons">
+        <li><i class="fas fa-map-marker-alt"></i> Places</li>
+        <li><i class="fas fa-plane"></i> Flight</li>
+        <li><i class="fas fa-bed"></i> Hotel</li>
+        <li><i class="fas fa-utensils"></i> Restaurant</li>
+    </ul>
+
+    <div class="main-buttons">
+        <a href="{% url 'login-to-profile' %}" class="btn">Login</a>
+        <a href="{% url 'create-profile' %}" class="btn">Register</a>
+    </div>
+    
+    <h1 id="welcome">Welcome to Travel Booking App</h1>
+    
+    <p id="text">Book flights, hotels, and explore amazing adventure.</p>
+
+</body>
+    
+{% endblock %} 
