@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    
+    <body class="main-profile-background-image">
+
+    <div class="header-container">
+        <p><img id="logo-img" src="{% static '/images/logo.jpg' %}" alt="logo"/></p>
+
+        <nav class="navigation">
+            <a href="{% url 'details-profile' request.user.pk %}">Profile</a>
+            <a href="#">My Bookings</a>
+            
+            <form method="post" action="{% url 'logout-from-profile' %}">
+                {% csrf_token %}
+                <button class="button" type="submit">Logout</button>
+            </form>
+        </nav>
+    </div>
+
+    <h1 id="title">Discover <a>the world</a></h1>
+    
+    <section class="booking-form">
+        <div>
+            <a href="{% url 'details-country' %}" class="booking-link">
+                <label for="country">Country</label>
+            </a>
+        </div>
+
+        <div>
+            <a href="#" class="booking-link">
+                <label for="destination">Destination</label>
+            </a>
+        </div>
+
+        <div>
+            <a href="#" class="booking-link">
+                <label for="flight">Flight</label>
+            </a>
+        </div>
+
+        <div>
+            <a href="#" class="booking-link">
+                <label for="hotel">Hotel</label>
+            </a>
+        </div>
+    </section>
+    
+    <section class="review-form">
+        <div>
+            <a href="#" class="review-link">
+                <span class="stars-left">★ ★ ★</span>
+                <label for="hotel">Review</label>
+                <span class="stars-right">★ ★ ★</span>
+            </a>
+        </div>
+    </section>
+
+    </body>
+
+{% endblock %} 
