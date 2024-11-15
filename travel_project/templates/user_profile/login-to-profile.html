@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load placeholder_filter %}
+{% load static %}
+{% block content %}
+    
+<body class="background-image">
+    <section id="login-page" class="content">
+        <form action="{% url 'login-to-profile' %}" id="login" method="post">
+            <div class="container">
+                <h1>Login</h1>
+                {% csrf_token %}
+                
+                {{ form.errors }}
+                {{ form.username|placeholder:"Email" }}
+                {{ form.password|placeholder:"Password" }}
+
+                <input class="btn submit" type="submit" value="Enter"/>
+            </div>
+        </form>
+    </section>
+</body>
+    
+{% endblock %} 
