@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load placeholder_filter %}
+{% block content %}
+    
+<body class="background-image">
+    <section id="register-page" class="content">
+        <form action="{% url 'create-profile' %}" id="register" method="post">
+            <div class="container">
+                <h1>Create Profile</h1>
+                {% csrf_token %}
+                
+                {{ form.email|placeholder:"Email" }}
+                {{ form.email.errors }}
+                
+                {{ form.password1|placeholder:"Password" }}
+                {{ form.password1.errors }}
+                
+                {{ form.password2|placeholder:"Repeat password" }}
+                {{ form.password2.errors }}
+                
+                <input class="btn submit" type="submit" value="Create"/>
+            </div>
+        </form>
+    </section>
+</body>
+    
+{% endblock %} 
